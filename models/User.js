@@ -38,9 +38,6 @@ User.init(
           len: [10],
         },
     },
-        interests: {
-        type: DataTypes.STRING,
-    },
     },
     {
       hooks: {
