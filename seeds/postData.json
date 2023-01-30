@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Dark Souls",
+        "description": "What is your favorite Dark Souls game? "
+    },
+    {
+        "title": "Movies and Television",
+        "description": "A board to discuss your favorite (or least favorite) movies, and TV shows."
+    },
+    {
+        "title": "Food and Travel",
+        "description": "A board to discuss your favorite foods, and travel locations."
+    },
+    {
+        "title": "LFG",
+        "description": "A board to find groups to play games with."
+    },
+    {
+        "title": "Music",
+        "description": "A board for disccusing music."
+    },
+    {
+        "title": "Technology",
+        "description": "A board for discussing technology."
+    }
+]
