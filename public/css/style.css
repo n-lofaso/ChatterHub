@@ -1,0 +1,29 @@
+html,body {
+    background-color: rgba(71, 70, 70);
+    margin:0;
+    height: 100%;
+}
+.old {
+    padding-top: 15em;
+}
+.c-button {
+    margin-top: -4em;
+}
+a {
+    text-decoration:none;
+    color: white;
+}
+.c-card__footer {
+    margin-bottom: -15px;
+    margin-top: 45px;
+}
+.password {
+    padding-top: 10px;
+    margin-bottom: -55px;
+}
+.email {
+    padding-bottom: 8px;
+}
+.new {
+    padding-top: 10em;
+}
