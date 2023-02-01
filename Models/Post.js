@@ -11,7 +11,7 @@ Post.init(
             primaryKey: true,
             autoIncrement: true
         },
-        Title: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -23,11 +23,11 @@ Post.init(
                 key: 'id'
             }
         },
-        Description: {
+        description: {
             type: DataTypes.TEXT,
             allowNull: true
         },
-        Likes: {
+        likes: {
             type: DataTypes.INTEGER,
             allowwNull: true
         }
