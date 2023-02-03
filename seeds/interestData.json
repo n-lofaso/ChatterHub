@@ -1,25 +1,31 @@
 [
     {
+        "id": "1",
         "name": "Video Games",
         "description": "A board for discussing video games."
     },
     {
+        "id": "2",
         "name": "Movies and Television",
         "description": "A board to discuss your favorite (or least favorite) movies, and TV shows."
     },
     {
+        "id": "3",
         "name": "Food and Travel",
         "description": "A board to discuss your favorite foods, and travel locations."
     },
     {
+        "id": "4",
         "name": "LFG",
         "description": "A board to find groups to play games with."
     },
     {
+        "id": "5",
         "name": "Music",
         "description": "A board for disccusing music."
     },
     {
+        "id": "6",
         "name": "Technology",
         "description": "A board for discussing technology."
     }

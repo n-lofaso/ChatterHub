@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comments} = require ('./model')
+const {Post, Comment} = require ('../models')
 
 //Video Game Route
 
@@ -10,7 +10,7 @@ router.get('/video-games', async (req, res) => {
       const dbPostData = await Post.findAll({
         include: [
           {
-            model: Comments,
+            model: Comment,
             attributes: ['filename', 'description'],
           },
         ],
