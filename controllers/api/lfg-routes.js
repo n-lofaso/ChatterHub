@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('./model')
-const withAuth = require('../utils/auth')
+const {Post, Comment} = require ('../../models')
+const withAuth = require('../../utils/auth')
 
 //LFG Route
 

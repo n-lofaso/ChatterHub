@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../models')
+const {Post, Comment} = require ('../../models')
+const withAuth = require('../../utils/auth')
 
-//Video Game Route
+//Movies and TV Route
 
-//GET all posts for video-games page
+//GET all posts for Movies and Television page
 
-router.get('/video-games', async (req, res) => {
+router.get('/movies-and-television', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -30,4 +31,7 @@ router.get('/video-games', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  
+
   

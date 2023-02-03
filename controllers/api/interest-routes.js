@@ -1,17 +1,16 @@
 const router = require('express').Router();
-const {Post, Comments} = require ('./model')
-const withAuth = require('../utils/auth')
+const {Post, Comment} = require ('../../models')
 
-//Movies and TV Route
+//Video Game Route
 
-//GET all posts for Movies and Television page
+//GET all posts for video-games page
 
-router.get('/movies-and-television', withAuth, async (req, res) => {
+router.get('/video-games', async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
           {
-            model: Comments,
+            model: Comment,
             attributes: ['filename', 'description'],
           },
         ],
@@ -31,7 +30,4 @@ router.get('/movies-and-television', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
-
-  
-
   
