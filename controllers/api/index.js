@@ -5,7 +5,7 @@ const technologyRoutes = require('./technology-routes');
 const foodAndTravel = requre('./food&travel-routes');
 const moviesAndTv = require('./movies&tv-routes');
 const lfg = require('./lfg-routes');
-const videogames = require('./interest-routes');
+const videogames = require('./videogames-routes');
 
 // All end points for the api
 router.use('/user', userRoutes);
