@@ -1,17 +1,16 @@
 <div class="u-center-block fixed-height-demo posts">
     <div class="c-card u-absolute-center">
         <header class="c-card__header">
-            <h2 class="c-heading">
+            <h2 id= "post-title" class="c-heading">
                 {{Post.title}}
                 <div class="c-heading__sub">{{User.name}}</div>
             </h2>
         </header>
-        <div class="c-card__body">
+        <div id= 'post-body' class="c-card__body">
             <p class="c-paragraph">{{Post.description}}</p>
         </div>
         <footer class="c-card__footer">
-            <button class="c-button c-button--warning pd comment">Leave a Comment</button>
-            <button class="c-button c-button--warning pd likes">{{Post.likes}} <i class="fa-solid fa-thumbs-up"></i></button>
+            <button id = 'create-comment-button' type ='button'class="c-button c-button--warning pd comment">Leave a Comment</button>
         </footer>
     {{#each post.comment as |comment|}}
     {{> comment}}

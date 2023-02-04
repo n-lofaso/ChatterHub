@@ -8,10 +8,10 @@
         <header class="c-card__header">
           <img alt="random placeholder image" src="./assests/logo.png"/>
           <h2 class="c-heading">
-            <a href="./views/login.handlebars">
-              <button class="c-button c-button--warning logout">Logout</button>
+            <a href="../views/login.handlebars">
+              <button id = 'logout-button' type='button' class="c-button c-button--warning logout">Logout</button>
             </a>
-            <button class="c-button c-button--warning post">Post</button>
+            <button id= 'create-post-button' type='button' class="c-button c-button--warning post">Post</button>
           </h2>
         </header>
         <footer class="c-card__footer">
@@ -50,4 +50,5 @@
         </footer>
       </div>
     </aside>
+    {{!-- Post link --}}
     <script src="./js/logout.js"></script>
