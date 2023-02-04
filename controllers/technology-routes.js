@@ -20,7 +20,7 @@ router.get('/technology', withAuth, async (req, res) => {
         post.get({ plain: true })
       );
   
-      res.render('homepage', {
+      res.render('/technology', {
         posts,
         logged_in: req.session.logged_in
 
