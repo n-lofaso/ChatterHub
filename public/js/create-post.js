@@ -1,6 +1,6 @@
 // Function to show the modal
 const showModal = () => {
-  const modal = document.querySelector('#modal');
+  document.querySelector('#modal').setAttribute('class', 'c-overlay c-overlay--visible')
 
 };
 
@@ -22,6 +22,12 @@ const createPostHandler = async () => {
     }
   }
 };
+
+const hideModal = () => {
+  document.querySelector('#modal').setAttribute('class', 'o-modal o-modal--dismissible')
+};
+
+document.querySelector('#cancel-button').addEventListener('click', hideModal);
 
 document
   .querySelector('#create-post-button')
