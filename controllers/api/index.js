@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const foodRoutes = require('./food&travel-routes');
-const videogameRoutes = require('./video-games-routes');
+const videogameRoutes = require('./videogames-routes');
 const lfgRoutes = require('./lfg-routes');
 const movieRoutes = require('./movies&tv-routes');
 const musicRoutes = require('./music-routes');

@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth')
 
 //GET all posts for LFG page
 
-router.get('/LFG', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -31,7 +31,7 @@ router.get('/LFG', withAuth, async (req, res) => {
     }
   });
 
-  router.post('/LFG', withAuth, async (req, res) => {
+  router.post('/', withAuth, async (req, res) => {
     try {
       const newProject= await Project.create({
         ...req.body,
@@ -45,7 +45,7 @@ router.get('/LFG', withAuth, async (req, res) => {
   });
 
 
-  router.delete('/:LFG', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const projectData = await Project.destroy({
         where: {

@@ -27,10 +27,6 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: true
         },
-        likes: {
-            type: DataTypes.INTEGER,
-            allowwNull: true
-        }
     },
     {
         sequelize,
