@@ -9,7 +9,7 @@
                 <div class="o-form-element email">
                     <label class="c-label">
                         Email:
-                        <input id="login-email" class="c-field c-field--label" type="email" placeholder="your@email.com" />
+                        <input id="login-email" class="c-field c-field--label" type="email" name="email" placeholder="your@email.com" />
                         <div role="tooltip" class="c-hint">
                             The email used to register your account
                         </div>
@@ -17,7 +17,7 @@
                 </div>
                 <label class="o-form-element c-label password">
                     Password:
-                    <input id="login-password" class="c-field c-field--label" type="password" />
+                    <input id="login-password" class="c-field c-field--label" type="password" name="password" />
                     <div class="o-form-element">
                         <label class="c-toggle c-toggle--success">
                             Remember me?
@@ -46,21 +46,19 @@
             <div class="c-card__body">
                 <label class="o-form-element c-label">
                     Username:
+                    <input id="signup-username" class="c-field c-field--label" type="name" name="name" placeholder="username" />
                         <div class="o-form-element email">
                             <label class="c-label">
                                 Email:
-                                <input class="c-field c-field--label" type="email" placeholder="your@email.com" />
-                                <div role="tooltip" class="c-hint">
-                                    The email used to register your account
-                                </div>
+                                <input id="signup-email" class="c-field c-field--label" type="email" name="email" placeholder="your@email.com" />
                             </label>
                         </div>
                         <label class="o-form-element c-label password">
                             Password:
-                            <input class="c-field c-field--label" type="password" />
+                            <input id="signup-password" class="c-field c-field--label" type="password" name="password" />
                             <label class="o-form-element c-label">
                                 Confirm Password:
-                                <input class="c-field c-field--label" type="password" />
+                                <input id="signup-password" class="c-field c-field--label" type="password" name="password" />
                             </label>
             </div>
             <footer class="c-card__footer">

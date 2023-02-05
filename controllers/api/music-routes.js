@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../models');
-const withAuth = require('../utils/auth');
+const {Post, Comment} = require ('../../Models');
+const withAuth = require('../../utils/auth');
 
-//Technology Route
+//Music Route
 
-//GET all posts for Technology page
+//GET all posts for Music page
 
-router.get('/technology', withAuth, async (req, res) => {
+router.get('/music', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -31,7 +31,7 @@ router.get('/technology', withAuth, async (req, res) => {
     }
   });
 
-  router.post('/technology', withAuth, async (req, res) => {
+  router.post('/music', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
         ...req.body,
@@ -51,7 +51,7 @@ router.get('/technology', withAuth, async (req, res) => {
   });
 
 
-  router.delete('/technology/:id', withAuth, async (req, res) => {
+  router.delete('/music/:id', withAuth, async (req, res) => {
     try {
       const commentData = await Comment.destroy({
         where: {

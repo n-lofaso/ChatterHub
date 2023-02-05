@@ -1,18 +1,19 @@
-const loginHandler = async () => {
+const loginHandler = async (e) => {
+  e.preventDefault();
 // Gets input from the fields
-  const username = document.querySelector('#login-username').value.trim();
-  const loginEmail = document.querySelector('#login-email').value.trim();
-  const loginPassword = document.querySelector('#login-password').value.trim();
+  // const username = document.querySelector('#login-username').value.trim();
+  const email = document.querySelector('#login-email').value.trim();
+  const password = document.querySelector('#login-password').value.trim();
 
-  if (username && loginEmail && loginPassword) {
-    const response = await fetch('/users/login', {
+  if (email && password) {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify,
+      body: JSON.stringify({ email, password}),
       headers: { 'Content-Type': 'application/json' },
     });
 // Directs user to homepage if response is ok
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       console.error(response.statusText);
     }
@@ -20,19 +21,19 @@ const loginHandler = async () => {
 };
 
 const signupHandler = async () => {
-  const username = document.querySelector('#login-username').value.trim();
-  const signupEmail = document.querySelector('#login-email').value.trim();
-  const signupPassword = document.querySelector('#login-password').value.trim();
+  const name = document.querySelector('#signup-username').value.trim();
+  const email = document.querySelector('#signup-email').value.trim();
+  const password = document.querySelector('#signup-password').value.trim();
 
-  if (username && signupEmail && signupPassword) {
-    const response = await fetch('/users', {
+  if (name && email && password) {
+    const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({name, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       console.error(response.statusText);
     }
