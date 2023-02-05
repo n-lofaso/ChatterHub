@@ -42,7 +42,7 @@ html,body {
     margin: -50px 0px 10px 42em;
     width: 20%;
 }
-.logout {
+.logout, .login {
     position: absolute;
     right: 0px;
     width: 10%;

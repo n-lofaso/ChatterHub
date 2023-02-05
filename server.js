@@ -16,13 +16,8 @@ const hbs = exphbs.create({ helpers });
 
 // session settings
 const sess = {
-  secret: 'Secret',
-  cookie: {
-    maxAge: 300000,
-    httpOnly: true,
-    secure: false,
-    sameSite: 'strict',
-  },
+  secret: 'Super secret secret',
+  cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -31,6 +26,7 @@ const sess = {
 };
 
 app.use(session(sess));
+
 // sets handlebars as the view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

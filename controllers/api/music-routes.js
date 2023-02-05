@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../../models');
+const {Post, Comment} = require ('../../Models');
 const withAuth = require('../../utils/auth');
 
 //Music Route

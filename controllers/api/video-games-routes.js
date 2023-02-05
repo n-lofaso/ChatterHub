@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../../models')
+const {Post, Comment} = require ('../../Models')
 
 //Video Game Route
 
@@ -31,3 +31,4 @@ router.get('/video-games', async (req, res) => {
     }
   });
   
+  module.exports = router;

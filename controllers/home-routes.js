@@ -1,10 +1,18 @@
 const router = require('express').Router();
-const { User, Interests, Post, Comment } = require('../models');
-const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   res.render('homepage'), {
-      };
-    });
+    loggedIn: req.session.loggedIn
+  };
+});
 
-  module.exports = router;
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
+
+module.exports = router;

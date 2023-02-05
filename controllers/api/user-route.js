@@ -1,21 +1,14 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../../Models');
 
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
-    const dbUserData = await User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-    });
+    const dbUserData = await User.create(req.body);
 
-    // TODO: Set up sessions with the 'loggedIn' variable
-    req.session.save((loggedIn) => {
-      // TODO: Set the 'loggedIn' session variable to 'true'
-
+    req.session.save(() => {
+      req.session.email = dbUserData.email;
       req.session.loggedIn = true;
-
       res.status(200).json(dbUserData);
     });
   } catch (err) {
