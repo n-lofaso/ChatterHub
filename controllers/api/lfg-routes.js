@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../../models')
+const {Post, Comment} = require ('../../Models')
 const withAuth = require('../../utils/auth')
 
 //LFG Route
@@ -64,3 +64,5 @@ router.get('/LFG', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  module.exports = router;
