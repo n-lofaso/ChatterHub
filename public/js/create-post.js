@@ -7,7 +7,7 @@ const showModal = () => {
 const createPostHandler = async () => {
   const title = document.querySelector('#post-title').value.trim();
   const body = document.querySelector('#post-body').value.trim();
-  let checkedButton = document.querySelector('input[name = "optionsRadios"]:checked');
+  const interest = document.querySelector('#selectedCategory').value;
   // let checkedButton;
   // for (let i = 0; i < radios.length; i++) {
   //   if(radios[i].checked) {
@@ -17,14 +17,14 @@ const createPostHandler = async () => {
   // }
 
   if (title && body) {
-    const response = await fetch(`/api/${checkedButton}`, {
+    const response = await fetch(`/api/${interest}`, {
       method: 'POST',
-      body: JSON.stringify({ title, body }),
+      body: JSON.stringify({ title: title, description: body }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/api/movies-and-television');
+      document.location.replace('/');
     } else {
       console.error(response.statusText);
     }

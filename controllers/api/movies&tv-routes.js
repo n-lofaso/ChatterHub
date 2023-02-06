@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth')
 
 //GET all posts for Movies and Television page
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [

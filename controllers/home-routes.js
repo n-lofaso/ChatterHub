@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['title', 'description']
+          where: { interests_id: id}
         }
       ]
     }); 

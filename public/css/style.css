@@ -79,3 +79,11 @@ img {
 .o-fieldset__legend{
     margin-left: 20px;
 }
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.selectedCategory {
+    padding-left: 15px;
+}

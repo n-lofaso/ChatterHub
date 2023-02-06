@@ -20,9 +20,9 @@
         placeholder="Description..."
       ></textarea>
     </div>
-    <div class="o-fieldset u-xlarge">
+    <div class="o-fieldset u-xlarge custom-select">
       <legend class="o-fieldset__legend">Select an interest</legend>
-      <div class="o-field c-field--choice u-centered">
+      {{!-- <div class="o-field c-field--choice u-centered">
         <input value="video-games" type="radio" name="optionsRadios"/>
         Video Games
         <input value="movies-and-television" type="radio" name="optionsRadios"/>
@@ -35,7 +35,18 @@
         Music
         <input value="technology" type="radio" name="optionsRadios"/>
         Technology
-      </div>
+      </div> --}}
+      <div class="selectedCategory">
+        <select id="selectedCategory">
+        <option value="">Select category:</option>
+        <option value="video-games">Video Games</option>
+        <option value="movies-and-television">Movies and Television</option>
+        <option value="food-and-travel">Food and Travel</option>
+        <option value="lfg">Looking for Group</option>
+        <option value="music">Music</option>
+        <option value="technology">Technology</option>
+      </select></div>
+      
     </div>
     <footer class="c-card__footer">
       <button
