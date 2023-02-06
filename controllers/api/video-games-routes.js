@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../../Models')
+const { Post, Comment } = require("../../model");
 
 //Video Game Route
 
