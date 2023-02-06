@@ -25,7 +25,7 @@ router.get('/:interest', async (req, res) => {
     }); 
     res.render('interests', interestData);
   }
-  catch {
+  catch(err) {
     res.json(err)
   }
 })
