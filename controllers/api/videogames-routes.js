@@ -16,12 +16,9 @@ router.get('/', withAuth, async (req, res) => {
       const posts = dbPostData.map((post) =>
         post.get({ plain: true })
       );
-  
-      res.render('/video-games', {
-        posts,
-        logged_in: req.session.logged_in
-
-      });
+    
+      
+      res.status(200).json(posts)
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
