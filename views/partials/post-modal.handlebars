@@ -1,31 +1,57 @@
 <div id="overlay" aria-hidden class="c-overlay c-overlay--dismissible"></div>
-    <div id="modal" role="dialog" class="o-modal o-modal--dismissible">
-      <div class="c-card">
-        <header class="c-card__header">
-          <h2 class="c-heading">Create a new Post</h2>
-        </header>
+<div id="modal" role="dialog" class="o-modal o-modal--dismissible">
+  <div class="c-card">
+    <header class="c-card__header">
+      <h2 class="c-heading">Create a new Post</h2>
+    </header>
 
-        <div class="c-card__body">
-          <input id="post-title"
-            class="c-field u-large"
-            placeholder="Title..."
-            type="text"
-          />
-        </div>
-        <div class="c-card__body">
-          <textarea id="post-body"
-            class="c-field u-medium"
-            placeholder="Description..."
-          ></textarea>
-        </div>
-
-        <footer class="c-card__footer">
-          <button id="cancel-button" type="button" class="c-button c-button--error u-large bt">
-            Cancel
-          </button>
-          <button id="post-button" type="button" class="c-button c-button--warning u-large right">
-            Post
-          </button>
-        </footer>
+    <div class="c-card__body">
+      <input
+        id="post-title"
+        class="c-field u-large"
+        placeholder="Title..."
+        type="text"
+      />
+    </div>
+    <div class="c-card__body">
+      <textarea
+        id="post-body"
+        class="c-field u-medium"
+        placeholder="Description..."
+      ></textarea>
+    </div>
+    <div class="o-fieldset u-xlarge">
+      <legend class="o-fieldset__legend">Select an interest</legend>
+      <div class="o-field c-field--choice u-centered">
+        <input type="radio" name="optionsRadios"/>
+        Video Games
+        <input type="radio" name="optionsRadios"/>
+        Movies and Television
+        <input type="radio" name="optionsRadios"/>
+        Food and Travel
+        <input type="radio" name="optionsRadios"/>
+        LFG
+        <input type="radio" name="optionsRadios"/>
+        Music
+        <input type="radio" name="optionsRadios"/>
+        Technology
       </div>
     </div>
+    <footer class="c-card__footer">
+      <button
+        id="cancel-button"
+        type="button"
+        class="c-button c-button--error u-large bt"
+      >
+        Cancel
+      </button>
+      <button
+        id="post-button"
+        type="button"
+        class="c-button c-button--warning u-large right"
+      >
+        Post
+      </button>
+    </footer>
+  </div>
+</div>
