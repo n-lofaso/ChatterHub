@@ -76,3 +76,6 @@ img {
     margin-left: 14px;
     width: 300px;
 }
+.o-fieldset__legend{
+    margin-left: 20px;
+}
