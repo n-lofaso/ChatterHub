@@ -8,14 +8,16 @@
         <header class="c-card__header">
           <img alt="random placeholder image" src="./assests/logo.png"/>
           <h2 class="c-heading">
-            {{!-- {{#if loggedIn}}
+            {{#if loggedIn}}
             <a href="/logout">
               <button id='logout-button' type='button' class="c-button c-button--warning logout">Logout</button>
-            </a> --}}
+            </a>
             <a href="javascript:void(0);"><button id= 'create-post-button' type='button' class="c-button c-button--warning post">Post</button></a>
+            {{else}}
             <a href="/login">
               <button id='logout-button' type='button' class="c-button c-button--warning login">Login</button>
             </a>
+            {{/if}}
           </h2>
         </header>
         <footer class="c-card__footer">

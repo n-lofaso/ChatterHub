@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {
-  res.render('homepage'), {
+  console.log(req.session.loggedIn)
+  res.render('homepage', {
     loggedIn: req.session.loggedIn
-  };
+  });
 });
 
 router.get('/login', (req, res) => {
@@ -14,5 +15,19 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/:interest', async (req, res) => {
+  try {
+    const interestData = Interest.findAll({
+      where: {
+        id: req.params.id
+      }
+    }); 
+    res.render('interests', interestData);
+  }
+  catch {
+    res.json(err)
+  }
+})
 
 module.exports = router;

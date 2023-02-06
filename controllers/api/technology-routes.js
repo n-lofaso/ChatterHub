@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Post, Comment} = require ('../../Models');
+const {Post, Comment} = require ('../../model');
 const withAuth = require('../../utils/auth');
 
 //Technology Route
