@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "interest_id": 1,
+        "post_title": "Breath of the Wild",
+        "post_text": "What do you think of the latest Zelda game?"
+    },
+    {
+        "id": 2,
+        "interest_id": 6,
+        "post_title": "Google Nest Hub",
+        "post_text": "Has anyone tried the new Google Nest Hub? What are your thoughts?"
+    },
+    {
+        "id": 3,
+        "interest_id": 2,
+        "post_title": "The Shawshank Redemption",
+        "post_text": "What is your favorite movie of all time?"
+    },
+    {
+        "id": 4,
+        "interest_id": 3,
+        "post_title": "France",
+        "post_text": "What is your favorite food destination?"
+    },
+    {
+        "id": 5,
+        "interest_id": 3,
+        "post_title": "Japan",
+        "post_text": "What is your favorite travel destination?"
+    },
+    {
+        "id": 6,
+        "interest_id": 5,
+        "post_title": "Classical Music",
+        "post_text": "What is your favorite type of music?"
+    }
+]
