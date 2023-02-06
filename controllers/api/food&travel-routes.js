@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 
 //GET all posts for Food and Travel page
 
-router.get('/food-and-travel', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -31,7 +31,7 @@ router.get('/food-and-travel', withAuth, async (req, res) => {
     }
   });
 
-  router.post('/food-and-travel', withAuth, async (req, res) => {
+  router.post('/', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
         ...req.body,
@@ -51,7 +51,7 @@ router.get('/food-and-travel', withAuth, async (req, res) => {
   });
 
 
-  router.delete('/food-and-travel/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const commentData = await Comment.destroy({
         where: {

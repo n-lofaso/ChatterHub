@@ -9,14 +9,14 @@ const createPostHandler = async () => {
   const body = document.querySelector('#post-body').value.trim();
 
   if (title && body) {
-    const response = await fetch('/posts', {
+    const response = await fetch(`/api/${interest}`, {
       method: 'POST',
       body: JSON.stringify({ title, body }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/posts');
+      document.location.replace('/api/movies-and-television');
     } else {
       console.error(response.statusText);
     }
@@ -29,6 +29,6 @@ const hideModal = () => {
 
 document.querySelector('#cancel-button').addEventListener('click', hideModal);
 
-document
-  .querySelector('#create-post-button')
-  .addEventListener('click', showModal);
+document.querySelector('#create-post-button').addEventListener('click', showModal);
+
+document.querySelector('#post-button').addEventListener('click', createPostHandler);

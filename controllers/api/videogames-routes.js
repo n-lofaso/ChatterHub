@@ -1,12 +1,9 @@
 const router = require('express').Router();
-const { Post, Comment } = require("../../model");
-const withAuth = require('../utils/auth');
+const {Post, Comment} = require ('../../model');
+const withAuth = require('../../utils/auth');
 
-//Food and Travel Route
 
-//GET all posts for Food and Travel page
-
-router.get('/video-games', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -31,7 +28,7 @@ router.get('/video-games', withAuth, async (req, res) => {
     }
   });
 
-  router.post('/video-games', withAuth, async (req, res) => {
+  router.post('/', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
         ...req.body,
@@ -51,7 +48,7 @@ router.get('/video-games', withAuth, async (req, res) => {
   });
 
 
-  router.delete('/video-games/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const commentData = await Comment.destroy({
         where: {

@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Post, Comment } = require("../../model");
+const {Post, Comment} = require ('../../model')
 const withAuth = require('../../utils/auth')
 
 //Movies and TV Route
 
 //GET all posts for Movies and Television page
 
-router.get('/movies-and-television', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
         include: [
@@ -32,7 +32,7 @@ router.get('/movies-and-television', withAuth, async (req, res) => {
   });
 
 
-  router.post('/movies-and-television', withAuth, async (req, res) => {
+  router.post('/', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
         ...req.body,
@@ -52,7 +52,7 @@ router.get('/movies-and-television', withAuth, async (req, res) => {
   });
 
 
-  router.delete('/movies-and-television/:id', withAuth, async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const commentData = await Comment.destroy({
         where: {
