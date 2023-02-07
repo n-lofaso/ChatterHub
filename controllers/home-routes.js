@@ -19,14 +19,14 @@ router.get('/login', (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const interestData = await Interests.findAll({
+    const interestData = await Post.findAll({
       where: {
         id: req.params.id
       },
       include: [
         {
           model: Post,
-          attributes: ['title', 'description']
+          // attributes: ['title', 'description']
         }
       ]
     }); 
