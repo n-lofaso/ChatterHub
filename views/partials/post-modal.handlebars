@@ -4,7 +4,44 @@
     <header class="c-card__header">
       <h2 class="c-heading">Create a new Post</h2>
     </header>
-
+    <details class="custom-select">
+      <summary class="radios">
+        <input
+          type="radio"
+          name="item"
+          id="default"
+          title="Select an Interest"
+          checked
+        />
+        <input type="radio" name="item" id="item1" title="Item 1" />
+        <input type="radio" name="item" id="item2" title="Item 2" />
+        <input type="radio" name="item" id="item3" title="Item 3" />
+        <input type="radio" name="item" id="item4" title="Item 4" />
+        <input type="radio" name="item" id="item5" title="Item 5" />
+      </summary>
+      <ul class="list list-item c-list c-list--unstyled">
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item1">
+            Video Games <i class="fa-solid fa-gamepad"></i>
+          </label>
+        </li>
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item2">Movies and Television <i class="fa-solid fa-film"></i></label>
+        </li>
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item3">Food and Travel <i class="fa-solid fa-earth-americas"></i></label>
+        </li>
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item4">LFG <i class="fa-solid fa-headset"></i></label>
+        </li>
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item5">Music <i class="fa-solid fa-compact-disc"></i></label>
+        </li>
+        <li class="c-list__item c-list__item--unstyled dropdown-list">
+          <label for="item5">Technology <i class="fa-solid fa-gear"></i></label>
+        </li>
+      </ul>
+    </details>
     <div class="c-card__body">
       <input
         id="post-title"
@@ -19,23 +56,6 @@
         class="c-field u-medium"
         placeholder="Description..."
       ></textarea>
-    </div>
-    <div class="o-fieldset u-xlarge">
-      <legend class="o-fieldset__legend">Select an interest</legend>
-      <div class="o-field c-field--choice u-centered">
-        <input value="video-games" type="radio" name="optionsRadios"/>
-        Video Games
-        <input value="movies-and-television" type="radio" name="optionsRadios"/>
-        Movies and Television
-        <input value="food-and-travel" type="radio" name="optionsRadios"/>
-        Food and Travel
-        <input value="lfg" type="radio" name="optionsRadios"/>
-        LFG
-        <input value="music" type="radio" name="optionsRadios"/>
-        Music
-        <input value="technology" type="radio" name="optionsRadios"/>
-        Technology
-      </div>
     </div>
     <footer class="c-card__footer">
       <button
