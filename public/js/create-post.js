@@ -7,9 +7,17 @@ const showModal = () => {
 const createPostHandler = async () => {
   const title = document.querySelector('#post-title').value.trim();
   const body = document.querySelector('#post-body').value.trim();
+  let checkedButton = document.querySelector('input[name = "optionsRadios"]:checked');
+  // let checkedButton;
+  // for (let i = 0; i < radios.length; i++) {
+  //   if(radios[i].checked) {
+  //     checkedButton = radios[i].value;
+  //     console.log(checkedButton);
+  //   }
+  // }
 
   if (title && body) {
-    const response = await fetch(`/api/movies-and-television`, {
+    const response = await fetch(`/api/${checkedButton}`, {
       method: 'POST',
       body: JSON.stringify({ title, body }),
       headers: { 'Content-Type': 'application/json' },
