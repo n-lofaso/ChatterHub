@@ -6,7 +6,7 @@ class Interests extends Model {}
 Interests.init(
     {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
         },
