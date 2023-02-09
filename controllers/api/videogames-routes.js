@@ -5,6 +5,9 @@ const {Post, Comment, Interests} = require ('../../model');
 router.get('/', async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
+      where: {
+        interests_id: 'video-games'
+      },
       include: 
         [Interests, Comment]
     });
@@ -35,31 +38,31 @@ router.post('/', async (req, res) => {
 });
 
 
-  router.delete('/:id', async (req, res) => {
-  try {
-    const commentData = await Comment.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+//   router.delete('/:id', async (req, res) => {
+//   try {
+//     const commentData = await Comment.destroy({
+//       where: {
+//         id: req.params.id,
+//         user_id: req.session.user_id,
+//       },
+//     });
 
-    const postData = await Post.destroy({
-      where: {
-          id: req.params.id,
-          user_id: req.session.user_id,
-      },
-    });
+//     const postData = await Post.destroy({
+//       where: {
+//           id: req.params.id,
+//           user_id: req.session.user_id,
+//       },
+//     });
 
-    if (!commentData||!postData) {
-      res.status(404).json({ message: 'Post not found' });
-      return;
-    }
+//     if (!commentData||!postData) {
+//       res.status(404).json({ message: 'Post not found' });
+//       return;
+//     }
 
-    res.status(200).json(commentData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.status(200).json(commentData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
   module.exports = router;
