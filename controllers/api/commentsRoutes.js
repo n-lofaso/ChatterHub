@@ -3,25 +3,25 @@ const {Comment} = require ('../../model');
 
 
 
-router.get('/', async(req, res)=>{
-    try{
-        const commentData = await Comment.findAll(req.params.id,{
-            include: [
-                {
-                    model: Comment,
-                    attributes: ['comment'],
-                },
-            ],
-        });
+// router.get('/', async(req, res)=>{
+//     try{
+//         const commentData = await Comment.findAll(req.params.id,{
+//             include: [
+//                 {
+//                     model: Comment,
+//                     attributes: ['comment'],
+//                 },
+//             ],
+//         });
 
-        const comments = commentData.map((comments) => comments.get({ plain: true }));
-        res.status(200).json(comments);
+//         const comments = commentData.map((comments) => comments.get({ plain: true }));
+//         res.status(200).json(comments);
 
-    } catch(err){
-        res.status(500).json(err)
+//     } catch(err){
+//         res.status(500).json(err)
 
-    }
-})
+//     }
+// })
 
 
 

@@ -5,27 +5,27 @@ const {Post, Comment, Interests} = require ('../../model')
 
 //GET all posts for Movies and Television page
 
-router.get('/', async (req, res) => {
-  try {
-    const dbPostData = await Post.findAll({
-      where: {
-        interests_id: 'movies-and-television'
-      },
-      include: 
-        [Interests, Comment]
-    });
+// router.get('/', async (req, res) => {
+//   try {
+//     const dbPostData = await Post.findAll({
+//       where: {
+//         interests_id: 'movies-and-television'
+//       },
+//       include: 
+//         [Interests, Comment]
+//     });
 
-    const posts = dbPostData.map((post) =>
-      post.get({ plain: true })
-    );
+//     const posts = dbPostData.map((post) =>
+//       post.get({ plain: true })
+//     );
   
     
-    res.status(200).json(posts)
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-  });
+//     res.status(200).json(posts)
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+//   });
 
 
   router.post('/', async (req, res) => {
