@@ -19,7 +19,7 @@ Post.init(
       type: DataTypes.INTEGER,
       allownull: false,
       references: {
-        model: "user",
+        model: "User",
         key: "id",
       },
     },
@@ -31,7 +31,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
       references: {
-        model: "interests",
+        model: "Interests",
         key: "id",
       },
     },
