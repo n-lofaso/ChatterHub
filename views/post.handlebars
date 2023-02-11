@@ -1,0 +1,21 @@
+{{> navbar}}
+
+
+<div class="postContainer">
+    {{#each posts as |post|}}
+    <div class="c-card posts">
+        <header class="c-card__header">
+            <h2 id= "post-title" class="c-heading">
+                <div class="c-heading__sub">{{title}}</div>
+            </h2>
+            <div class="c-heading__sub">Posted by: {{user.name}}</div>
+        </header>
+        <div id= 'post-body' class="c-card__body">
+            <p class="c-paragraph">{{description}}</p>
+        </div>
+        <footer class="c-card__footer">
+            <button id = 'create-comment-button' type ='button'class="c-button c-button--warning pd comment commentButton">Leave a Comment</button>
+        </footer>
+    </div>
+    {{/each}}
+</div>
