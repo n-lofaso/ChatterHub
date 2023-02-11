@@ -18,7 +18,7 @@ const createPostHandler = async () => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace(`/${interests_id}`);
     } else {
       console.error(response.statusText);
     }
