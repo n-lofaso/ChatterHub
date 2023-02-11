@@ -1,4 +1,4 @@
-const { Interests, Post } = require('../model')
+const { Interests, Post, User } = require('../model')
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {
@@ -17,22 +17,22 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/:id', async (req, res) => {
-  try {
-    const interestData = await Post.findAll({
-      where: {
-        id: req.params.id
-      },
-      include: [
-        {
-          model: Post,
-          // attributes: ['title', 'description']
-        }
-      ]
-    }); 
-    const interests = interestData.map((interest) => interest.get({ plain: true}))
+const getPath = 'video-games'
 
-    res.render('homepage', { ...interests, loggedIn: req.session.loggedIn});
+router.get(`/${getPath}`, async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      where: {
+        interests_id: `${getPath}`
+      },
+      include: [{
+        model: User,
+        attributes: ['name']
+      }],
+    }); 
+    const posts = postData.map((post) => post.get({ plain: true}))
+    console.log(posts)
+    res.render('post', { posts, loggedIn: req.session.loggedIn});
   }
   catch(err) {
     res.json(err)
