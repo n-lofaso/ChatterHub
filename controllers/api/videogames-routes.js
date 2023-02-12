@@ -2,27 +2,27 @@ const router = require('express').Router();
 const {Post, Comment, Interests} = require ('../../model');
 
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const dbPostData = await Post.findAll({
-//       where: {
-//         interests_id: 'video-games'
-//       },
-//       include: 
-//         [Interests, Comment]
-//     });
+router.get('/', async (req, res) => {
+  try {
+    const dbPostData = await Post.findAll({
+      where: {
+        interest_id: 'video-games'
+      },
+      include: 
+        [Interests, Comment]
+    });
 
-//     const posts = dbPostData.map((post) =>
-//       post.get({ plain: true })
-//     );
+    const posts = dbPostData.map((post) =>
+      post.get({ plain: true })
+    );
   
     
-//     res.status(200).json(posts)
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+    res.status(200).json(posts)
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', async (req, res) => {
   try {
