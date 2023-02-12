@@ -9,6 +9,8 @@ Interests.init(
             type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
+            unique: true,
+            collate: 'utf8_general_ci',
         },
         name: {
             type: DataTypes.STRING,

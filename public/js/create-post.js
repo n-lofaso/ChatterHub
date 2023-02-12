@@ -7,18 +7,18 @@ const showModal = () => {
 const createPostHandler = async () => {
   const title = document.querySelector('#post-title').value.trim();
   const description = document.querySelector('#post-body').value.trim();
-  const interests_id = document.querySelector('#route').value.trim();
+  const interest_id = document.querySelector('#route').value.trim();
 
 
   if (title && description) {
-    const response = await fetch(`/api/${interests_id}`, {
+    const response = await fetch(`/api/${interest_id}`, {
       method: 'POST',
-      body: JSON.stringify({ title, description, interests_id }),
+      body: JSON.stringify({ title, description, interest_id }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace(`/${interests_id}`);
+      document.location.replace(`/${interest_id}`);
     } else {
       console.error(response.statusText);
     }

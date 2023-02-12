@@ -21,7 +21,7 @@ router.get(`/video-games`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'video-games'
+        interest_id: 'video-games'
       },
       include: [{
         model: User,
@@ -41,7 +41,7 @@ router.get(`/food-and-travel`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'food-and-travel'
+        interest_id: 'food-and-travel'
       },
       include: [{
         model: User,
@@ -61,7 +61,7 @@ router.get(`/lfg`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'lfg'
+        interest_id: 'lfg'
       },
       include: [{
         model: User,
@@ -81,7 +81,7 @@ router.get(`/movies-and-television`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'movies-and-television'
+        interest_id: 'movies-and-television'
       },
       include: [{
         model: User,
@@ -101,7 +101,7 @@ router.get(`/music`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'music'
+        interest_id: 'music'
       },
       include: [{
         model: User,
@@ -121,7 +121,7 @@ router.get(`/technology`, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        interests_id: 'technology'
+        interest_id: 'technology'
       },
       include: [{
         model: User,

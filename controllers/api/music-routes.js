@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
       where: {
-        interests_id: 'music'
+        interest_id: 'music'
       },
       include: 
         [Interests, Comment]

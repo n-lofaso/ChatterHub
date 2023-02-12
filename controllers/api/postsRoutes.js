@@ -3,25 +3,25 @@ const {Post} = require ('../../model');
 
 
 
-router.get('/', async(req, res)=>{
-    try{
-        const postsData = await Post.findAll(req.params.id,{
-            include: [
-                {
-                    model: Post,
-                    attributes: ['title, interest_id'],
-                },
-            ],
-        });
+// router.get('/', async(req, res)=>{
+//     try{
+//         const postsData = await Post.findAll(req.params.id,{
+//             include: [
+//                 {
+//                     model: Post,
+//                     attributes: ['title, interest_id'],
+//                 },
+//             ],
+//         });
 
-        const posts = postsData.map((posts) => posts.get({ plain: true }));
-        res.status(200).json(posts);
+//         const posts = postsData.map((posts) => posts.get({ plain: true }));
+//         res.status(200).json(posts);
 
-    } catch(err){
-        res.status(500).json(err)
+//     } catch(err){
+//         res.status(500).json(err)
 
-    }
-})
+//     }
+// })
 
 
 

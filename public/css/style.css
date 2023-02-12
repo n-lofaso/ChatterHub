@@ -63,14 +63,14 @@ html,body {
 .logout, .login {
     position: relative;
     width: 10%;
-    margin: -70px 200px 0 90%;
+    margin: -70px 200px -4px 90%;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 .post {
     position: relative;
     width: 10%;
-    margin: -70px 200px 3% 78%;
+    margin: -70px 200px 4% 78%;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
