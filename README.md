@@ -1,5 +1,7 @@
 # ChatterHub
 
+Deployed Application: https://limitless-stream-42645.herokuapp.com/video-games
+
 ## Table of Contents
 
 - [User-Story](#user-story)
