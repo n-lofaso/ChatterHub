@@ -27,12 +27,14 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    interests_id: {
+    interest_id: {
       type: DataTypes.STRING,
       allowNull: false,
       references: {
         model: "interests",
         key: "id",
+        unique: true,
+        collate: 'utf8_General_ci',
       },
     },
   },

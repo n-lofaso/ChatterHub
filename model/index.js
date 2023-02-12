@@ -20,11 +20,11 @@ Comment.belongsTo(User, {
 });
 
 Interests.hasMany(Post, {
-    foreignKey: 'interests_id'
+    foreignKey: 'interest_id'
 });
 
 Post.belongsTo(Interests, {
-    foreignKey: 'interests_id'
+    foreignKey: 'interest_id'
 });
 
 Post.hasMany(Comment, {
